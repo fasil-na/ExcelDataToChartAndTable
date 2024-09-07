@@ -68,3 +68,89 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+**Server side**
+
+This Node.js application provides a REST API for handling Excel files with Express.js and MongoDB. It supports uploading Excel files, retrieving data with pagination, and fetching data for bar graphs.
+
+Features
+Upload Excel Files: Stores file data in MongoDB.
+Retrieve Data: Paginated data access from MongoDB.
+Bar Graph Data: Retrieves recent data for visualization.
+
+Setup
+Clone the Repo:
+
+bash
+Copy code
+git clone https://github.com/yourusername/repository-name.git
+cd repository-name
+Install Dependencies:
+
+bash
+Copy code
+npm install
+Configure MongoDB: Update the mongoURI in index.js with your MongoDB connection string.
+
+Run the Server:
+
+bash
+Copy code
+npm start
+
+Endpoints
+POST /upload: Uploads and processes an Excel file.
+GET /data: Fetches paginated data.
+GET /dataForBarGraph: Retrieves recent data for bar graphs
+
+
+**Client side**
+
+File Upload and Data Visualization
+This project includes React components for handling file uploads and visualizing data with charts. It consists of a file upload component and a bar graph component, integrated with an Express backend.
+
+Features
+File Upload and Table Display: Upload Excel files, display data in a table, and handle pagination.
+Bar Graph Visualization: Display revenue data as a bar graph, including monthly revenue and profit.
+Components
+FileUploadTable
+Functionality: Allows users to upload Excel files and view the data in a paginated table format.
+Features:
+File upload with form-data.
+Data fetching with pagination.
+Navigation to a graph view page.
+Dependencies: axios, react-router-dom
+BarGraph
+Functionality: Displays revenue and profit data from an API in a bar graph.
+Features:
+Fetches and processes data from the backend.
+Generates a bar chart with monthly revenue data.
+Dependencies: axios, react-chartjs-2, chart.js
+Setup
+Clone the Repo:
+
+bash
+Copy code
+git clone https://github.com/yourusername/repository-name.git
+cd repository-name
+Install Dependencies:
+
+bash
+Copy code
+npm install
+Run the Application: Ensure the backend server is running (see backend setup in the backend README). Start the React app with:
+
+bash
+Copy code
+npm start
+Usage
+File Upload and Table View:
+
+Navigate to the upload page.
+Upload an Excel file to populate the table.
+Use pagination controls to navigate through data.
+Bar Graph View:
+
+Click on the "Graph view" button in the file upload component.
+View the bar graph showing monthly revenue.
