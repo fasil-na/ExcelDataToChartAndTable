@@ -1,0 +1,69 @@
+.app-header {
+  background: linear-gradient(to right, lightblue, darkblue);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.app-header .logo {
+  width: 100px;
+}
+
+.header-content {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.header-content button {
+  margin-left: 30px;
+  padding: 8px 16px;
+  background-color: #ffffff;
+  color: darkblue;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.header-content button:hover {
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .header-content button {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    padding: 10px 20px;
+  }
+
+  .header-content {
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .header-content button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
